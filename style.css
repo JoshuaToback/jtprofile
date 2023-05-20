@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 7px solid black;
+  background-color: white;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoContainer p {
+  font-size: 25px;
+}
+
+.socialsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials img {
+  width: 75px;
+  height: 75px;
+  margin: 20px;
+}
+
+.socials img:hover {
+  cursor: pointer;
+}
+
+/* Shorts */
+
+#shortsContainer {
+  padding: 20px;
+  text-align: center;
+}
+.tiktok-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.tiktok-video {
+  flex-basis: 23%; /* Adjust the width of each video as needed */
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+  width: 400px;
+}
+
+/* Livestreams */
+
+#liveContainer {
+  padding: 20px;
+  text-align: center;
+}
+
+  .videos iframe {
+    padding: 20px;
+  }
+
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    justify-content: center;
+  }
+
+  .infoContainer p {
+    font-size: 20px;
+  }
+
+  .socials img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  /* Shorts */
+  .tiktok-video {
+    flex-basis: 100%; /* Videos take full width on small screens */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #liveContainer {
+    padding: 10px;
+    display: flex;  
+    flex-direction: column;
+  }
+
+  .videos iframe {
+    padding: 20px;
+    width: 400px;
+    height: auto;
+  }
+}
+
